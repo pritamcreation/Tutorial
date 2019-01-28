@@ -1,0 +1,6 @@
+select distinct ServerName,count(distinct name) from clinicaldatarepository c
+inner join practice p on p.clinicaldatarepositoryuid=c.clinicaldatarepositoryuid
+group by ServerName
+
+select distinct ServerName, name from clinicaldatarepository c
+inner join practice p on p.clinicaldatarepositoryuid=c.clinicaldatarepositoryuid
